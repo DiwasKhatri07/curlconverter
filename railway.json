@@ -4,7 +4,7 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "pnpm run build && pnpm run preview",
+    "startCommand": "pnpm start",
     "restartPolicyMaxRetries": 5
   }
 }
