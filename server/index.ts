@@ -8,6 +8,12 @@ const __dirname = path.dirname(__filename);
 
 async function startServer() {
   console.log("Starting server initialization...");
+  console.log("Current working directory:", process.cwd());
+  const fs = await import('fs');
+  console.log("Files in current directory:", fs.readdirSync('.'));
+  if (fs.existsSync('dist')) {
+    console.log("Files in dist directory:", fs.readdirSync('dist'));
+  }
   const app = express();
   const server = createServer(app);
 
